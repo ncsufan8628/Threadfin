@@ -611,8 +611,8 @@ function mappingDetail(xepg) {
 
           break;
         } else {
-          //streamHasCUID
-          showElement("streamHasCUID", false)
+          //streamHasCUID - fix
+          showElement("streamHasCUID", true)
           break;
         }
 
