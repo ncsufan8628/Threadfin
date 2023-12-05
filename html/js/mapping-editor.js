@@ -599,7 +599,6 @@ function mappingDetail(xepg) {
         break;
 
       case "x-update-channel-name":
-        if (thisChannel.hasOwnProperty("_uuid.key") == true) {
           newItem["_element"] = "INPUT";
           newItem["type"] = "checkbox";
           switch (JSON.parse(thisChannel["x-update-channel-name"])) {
@@ -607,14 +606,8 @@ function mappingDetail(xepg) {
               break
           }
           newItem["onchange"] = 'saveChannelNameUpdate("' + xepg + '")';
-          showElement("streamHasCUID", true)
+          break;
 
-          break;
-        } else {
-          //streamHasCUID - fix
-          showElement("streamHasCUID", true)
-          break;
-        }
 
       case "x-active":
         newItem["_element"] = "INPUT";
